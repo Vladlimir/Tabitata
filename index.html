@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Платформер на JavaScript</title>
+    <style>
+        body { margin: 0; }
+        canvas { background: #87CEEB; display: block; margin: 0 auto; }
+        video {
+            position: fixed; /* Фиксированное позиционирование */
+            top: 0; /* Начинаем с верхней части экрана */
+            left: 0; /* Начинаем с левой части экрана */
+            width: 100vw; /* Занимаем всю ширину окна */
+            height: 100vh; /* Занимаем всю высоту окна */
+            z-index: 9999; /* Убедитесь, что видео поверх других элементов */
+            display: none; /* Скрываем видео по умолчанию */
+        }
+    </style>
+</head>
+<body>
+    
+    <canvas id="gameCanvas" width="1200" height="600"></canvas>
+    
+    <!-- Элемент видео для показа при столкновении с Райденом -->
+    <video id="raidenVideo" width="640" height="480" style="display:none;">
+        <source src="raiden_video.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+    
+    <script src="index.js"></script>
+</body>
+</html>
